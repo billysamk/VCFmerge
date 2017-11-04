@@ -1,0 +1,69 @@
+---
+layout: blank
+title: Home
+---
+
+<div class="jumbotron">
+	<div class="container">
+		<h1 class="bold">Merge all your VCF into one file <br />by billysamk</h1>
+		<p>More details to add here</a>.</p>
+		<a href="https://github.com/billsamk" class="btn btn-white"><i class="material-icons">account_circle</i> Github Profile</a>
+	</div>
+</div>
+
+<div class="alert alert-primary">
+	<div class="container">
+		<div class="alert-icon">
+			<i class="material-icons">warning</i>
+		</div>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true"><i class="material-icons">clear</i></span>
+		</button>
+		<b>More Instructions</b><br/>
+		To be added.
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+
+		<div class="col-md-7">
+			<h2><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i> Latest Updates</h2>
+			<hr />
+			<div class="alert alert-primary">
+				<div class="alert-icon">
+					<i class="material-icons">warning</i>
+				</div>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true"><i class="material-icons">clear</i></span>
+				</button>
+				<b>GENERAL NOTE</b><br/>
+				More Stuffs
+			</div>
+			{% for news in site.data.news limit:2 %}
+			<div class="card">
+				<div class="card-heading">
+					<h3>{{ news.date | date_to_long_string }}</h3>
+				</div>
+				<div class="card-content-1">
+					{{ news.content | markdownify }}
+				</div>
+			</div>
+			{% endfor %}
+
+			<a href="news.html" class="btn btn-primary">All Updates</a>
+
+		</div>
+		<div class="visible-xs visible-sm"><hr/><br/></div>
+		<div class="col-md-5">
+
+			<h2><i class="fa fa-download fa-fw" aria-hidden="true"></i> Downloads</h2>
+			<hr />
+			</div>
+	<hr/>
+
+	<h3><i class="fa fa-share-alt fa-fw" aria-hidden="true"></i> <b>Share this Page:</b></h3>
+	<div class="addthis_native_toolbox"></div>
+	<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-574c7b479f77586f" async defer></script>
+
+</div>
